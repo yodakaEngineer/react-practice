@@ -7,7 +7,7 @@ const Header: React.FC = () => {
         <ul className={classes.menu}>
             <li className={classes.menu__link}><Link to='/'>top</Link></li>
             <li className={classes.menu__link}><Link to='/about'>about</Link></li>
-            <li className={classes.menu__link}><Link to='/page2'>page2</Link></li>
+            <li className={classes.menu__link}><Link to='/list'>list</Link></li>
             <li className={classes.menu__link}><Link to='/page3'>page3</Link></li>
         </ul>
     )

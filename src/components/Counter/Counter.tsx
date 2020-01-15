@@ -7,7 +7,7 @@ type btnProps = {
 
 const Btn: React.FC<btnProps> = (props) => {
     const btn = (
-        <button onClick={(e)=>props.onChangeCount()}>
+        <button onClick={props.onChangeCount}>
             {props.name}
         </button>
     )
