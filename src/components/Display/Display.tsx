@@ -7,7 +7,7 @@ interface InputAreaProps {
 
 const InputArea: React.FC<InputAreaProps> = props => {
     return (
-        <TextField id="standard-basic" label="Standard" onChange={e => props.onChange(e.target.value)} />
+        <TextField id="standard-basic" label="入力してね" onChange={e => props.onChange(e.target.value)} />
     )
 }
 
