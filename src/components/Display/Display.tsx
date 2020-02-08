@@ -16,8 +16,8 @@ const Display: React.FC = () => {
 
     return (
         <div>
-            <p>{msg}</p>
             <InputArea onChange={(value: string)=> setMsg(value)} />
+            <p>{msg}</p>
         </div>
     )
 }
