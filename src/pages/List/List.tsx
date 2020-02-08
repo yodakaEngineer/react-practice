@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {PageHeader} from "../../App";
 import GetList from "../../components/GetList/GetList";
 import Table from "../../components/Table/Table";
 
@@ -25,6 +26,7 @@ const List: React.FC = () => {
 
     return (
         <div>
+            <PageHeader>List</PageHeader>
             <GetList onGetList={(id: number)=> ()=> findById(id)} onReset={()=> setList(itemList)}/>
             <Table list={list}/>
         </div>

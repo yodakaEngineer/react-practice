@@ -2,13 +2,14 @@ import React from 'react';
 import './reset.css'
 import './App.css'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import styled from "styled-components";
 import About from "./pages/About/About";
 import Header from './components/Header/Header';
 import Index from "./pages/Index/Index";
 import List from "./pages/List/List";
 
 const App: React.FC = () => {
-    const page3 = () => <div><h1>page3</h1>3枚目のページです</div>
+    const page3 = () => <div><PageHeader>Page3</PageHeader>3枚目のページです</div>
 
     return (
         <div>
@@ -32,3 +33,7 @@ const App: React.FC = () => {
 }
 
 export default App;
+
+export const PageHeader = styled.h1`
+margin: 1rem 0;
+`
