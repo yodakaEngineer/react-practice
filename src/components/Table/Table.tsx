@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import {TableProps, User} from "../../pages/List/List";
 
 const Table: React.FC<TableProps> = props => {
@@ -22,7 +23,7 @@ const Table: React.FC<TableProps> = props => {
     })
 
     return (
-        <table>
+        <TableComponent>
             <thead>
             <tr>
                 <th>
@@ -42,8 +43,12 @@ const Table: React.FC<TableProps> = props => {
             <tbody>
             {listItems}
             </tbody>
-        </table>
+        </TableComponent>
     )
 }
 
 export default Table
+
+const TableComponent = styled.div`
+margin: 1rem 0;
+`

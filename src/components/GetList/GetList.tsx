@@ -1,6 +1,7 @@
 import {TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import Button from "@material-ui/core/Button";
+import styled from "styled-components";
 import {GetListProps} from "../../pages/List/List";
 
 const GetList: React.FC<GetListProps> = props => {
@@ -10,12 +11,22 @@ const GetList: React.FC<GetListProps> = props => {
     }
 
     return (
-        <div>
+        <Wrapper>
             <TextField id="standard-basic" label="ID検索" type='number' value={id} onChange={(e) => changeId(Number(e.target.value)) } />
-            <Button variant='outlined' onClick={props.onGetList(id)} style={{margin:'0 0.5rem'}}>findById</Button>
-            <Button variant='outlined' onClick={props.onReset} style={{margin:'0 0.5rem'}}>reset</Button>
-        </div>
+            <ButtonArea>
+                <Button variant='outlined' onClick={props.onGetList(id)}>findById</Button>
+                <Button variant='outlined' onClick={props.onReset}>reset</Button>
+            </ButtonArea>
+        </Wrapper>
     )
 }
 
 export default GetList
+
+const ButtonArea = styled.div`
+margin-top: auto;
+`
+
+const Wrapper = styled.div`
+display: flex;
+`
