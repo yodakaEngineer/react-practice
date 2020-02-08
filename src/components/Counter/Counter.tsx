@@ -1,5 +1,6 @@
 import React, {useReducer} from "react";
 import Button from '@material-ui/core/Button';
+import styled from "styled-components";
 
 type btnProps = {
     name: string,
@@ -8,7 +9,7 @@ type btnProps = {
 
 const Btn: React.FC<btnProps> = (props) => {
     const btn = (
-        <Button variant="outlined" onClick={props.onChangeCount}>
+        <Button variant="outlined" onClick={props.onChangeCount} style={{margin:'0 0.5rem'}}>
             {props.name}
         </Button>
     )
@@ -32,12 +33,17 @@ const Counter: React.FC = () => {
 
     return (
         <div>
-            <p>{count}</p>
-            <Btn name='リセット' onChangeCount={()=>dispatch('reset')}/>
-            <Btn name='アップ' onChangeCount={()=>dispatch('up')}/>
-            <Btn name='ダウン' onChangeCount={()=>dispatch('down')}/>
+            <Count>{count}</Count>
+            <Btn name='Down' onChangeCount={()=>dispatch('down')}/>
+            <Btn name='Reset' onChangeCount={()=>dispatch('reset')}/>
+            <Btn name='Up' onChangeCount={()=>dispatch('up')}/>
         </div>
     )
 }
 
 export default Counter
+
+const Count = styled.p`
+margin: 1rem 0;
+font-size: 2rem;
+`

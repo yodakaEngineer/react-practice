@@ -36,4 +36,5 @@ export default App;
 
 export const PageHeader = styled.h1`
 margin: 1rem 0;
+font-size: 2rem;
 `
