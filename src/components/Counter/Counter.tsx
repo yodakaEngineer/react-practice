@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Button from '@material-ui/core/Button';
 
 type btnProps = {
     name: string,
@@ -7,9 +8,9 @@ type btnProps = {
 
 const Btn: React.FC<btnProps> = (props) => {
     const btn = (
-        <button onClick={props.onChangeCount}>
+        <Button variant="outlined" onClick={props.onChangeCount}>
             {props.name}
-        </button>
+        </Button>
     )
     return (btn)
 }

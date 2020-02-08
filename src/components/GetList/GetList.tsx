@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Button from "@material-ui/core/Button";
 
 interface GetListProps {
     onGetList: any,
@@ -11,8 +12,8 @@ const GetList: React.FC<GetListProps> = props => {
     return (
         <div>
             <input type='number' onChange={(e) => setId(Number(e.target.value)) } />
-            <button onClick={props.onGetList(id)}>findById</button>
-            <button onClick={props.onReset}>reset</button>
+            <Button variant='outlined' onClick={props.onGetList(id)}>findById</Button>
+            <Button variant='outlined' onClick={props.onReset}>reset</Button>
         </div>
     )
 }
