@@ -21,10 +21,6 @@ const Table: React.FC<TableProps> = props => {
         )
     })
 
-    if (listItems.length === 0) {
-        return (<div></div>)
-    }
-
     return (
         <table>
             <thead>
