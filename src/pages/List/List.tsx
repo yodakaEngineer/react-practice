@@ -20,6 +20,7 @@ const List: React.FC = () => {
     ]
     const [list,setList] = useState<User[]>(itemList)
     const findById = (id: number) => {
+        if(id === 0) { return }
         const user = itemList.filter(user => user.id === id)
         setList(user)
     }
