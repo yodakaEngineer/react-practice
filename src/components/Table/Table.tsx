@@ -1,9 +1,5 @@
 import React from "react";
-import {User} from "../../pages/List/List";
-
-interface TableProps {
-    list: User[]
-}
+import {TableProps, User} from "../../pages/List/List";
 
 const Table: React.FC<TableProps> = props => {
     const listItems = props.list.map((item: User) => {

@@ -2,13 +2,6 @@ import React, {useState} from "react";
 import GetList from "../../components/GetList/GetList";
 import Table from "../../components/Table/Table";
 
-export interface User {
-    id: number
-    name: string
-    age: number
-    role: string
-}
-
 const List: React.FC = () => {
     const itemList: User[] = [
         {
@@ -38,4 +31,17 @@ const List: React.FC = () => {
     )
 }
 
+export interface User {
+    id: number
+    name: string
+    age: number
+    role: string
+}
+export interface TableProps {
+    list: User[]
+}
+export interface GetListProps {
+    onGetList: any,
+    onReset: any
+}
 export default List

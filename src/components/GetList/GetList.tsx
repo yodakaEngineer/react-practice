@@ -1,11 +1,7 @@
 import {TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import Button from "@material-ui/core/Button";
-
-interface GetListProps {
-    onGetList: any,
-    onReset: any
-}
+import {GetListProps} from "../../pages/List/List";
 
 const GetList: React.FC<GetListProps> = props => {
     const [id,setId] = useState(0)
