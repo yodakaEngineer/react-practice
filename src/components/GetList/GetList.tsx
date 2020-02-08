@@ -12,7 +12,7 @@ const GetList: React.FC<GetListProps> = props => {
 
     return (
         <div>
-            <TextField id="standard-basic" label="Standard" type='number' onChange={(e) => setId(Number(e.target.value)) } />
+            <TextField id="standard-basic" label="ID検索" type='number' onChange={(e) => setId(Number(e.target.value)) } />
             <Button variant='outlined' onClick={props.onGetList(id)}>findById</Button>
             <Button variant='outlined' onClick={props.onReset}>reset</Button>
         </div>
