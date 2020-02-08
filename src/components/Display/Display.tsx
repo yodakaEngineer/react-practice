@@ -1,3 +1,4 @@
+import {TextField} from "@material-ui/core";
 import React, {useState} from "react";
 
 interface InputAreaProps {
@@ -6,7 +7,7 @@ interface InputAreaProps {
 
 const InputArea: React.FC<InputAreaProps> = props => {
     return (
-        <input onChange={e => props.onChange(e.target.value)}/>
+        <TextField id="standard-basic" label="Standard" onChange={e => props.onChange(e.target.value)} />
     )
 }
 

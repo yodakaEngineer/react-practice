@@ -1,3 +1,4 @@
+import {TextField} from "@material-ui/core";
 import React, {useState} from "react";
 import Button from "@material-ui/core/Button";
 
@@ -11,7 +12,7 @@ const GetList: React.FC<GetListProps> = props => {
 
     return (
         <div>
-            <input type='number' onChange={(e) => setId(Number(e.target.value)) } />
+            <TextField id="standard-basic" label="Standard" type='number' onChange={(e) => setId(Number(e.target.value)) } />
             <Button variant='outlined' onClick={props.onGetList(id)}>findById</Button>
             <Button variant='outlined' onClick={props.onReset}>reset</Button>
         </div>
